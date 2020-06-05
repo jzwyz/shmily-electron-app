@@ -1,0 +1,64 @@
+{
+  "name": "shmily-app",
+  "version": "1.0.0",
+  "description": "shmily app",
+  "author": {
+    "name": "Jason",
+    "email": "jiangzwyz@qq.com",
+    "url": "https://jzwyz.github.io/shmily-blog/index.html"
+  },
+  "main": "dist/main",
+  "scripts": {
+    "start": "electron .",
+    "build": "rm -rf ./dist && tsc",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "productName": "彩站帮帮",
+    "appId": "com.hongdan310.shop",
+    "files": [
+      "dist/",
+      "node_modules/",
+      "package.json"
+    ],
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "msi"
+      ]
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "rpm",
+        "AppImage"
+      ],
+      "category": "Development"
+    },
+    "directories": {
+      "buildResources": "resources",
+      "output": "release"
+    }
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^8.3.0",
+    "electron-packager": "^14.2.1",
+    "electron-builder": "^22.7.0"
+  }
+}

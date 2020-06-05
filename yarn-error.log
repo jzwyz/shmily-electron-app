@@ -1,0 +1,41 @@
+Arguments: 
+  /usr/local/lib/node_modules/node/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js add electron-builder --dev
+
+PATH: 
+  /Users/aolei/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Wireshark.app/Contents/MacOS:/Users/aolei/bin:/Users/aolei/app/maven-3.6.0/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  13.7.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "shmily-app",
+    "version": "1.0.0",
+    "description": "shmily app",
+    "main": "dist/main",
+    "scripts": {
+      "start": "electron .",
+      "build": "rm -rf ./dist && tsc"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "electron": "^8.3.0",
+      "electron-packager": "^14.2.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/Users/aolei/Library/Caches/Yarn/v1/npm-ms-2.0.0-5608aeadfc00be6c2901df5f9861788de0d597c8/license.md' -> '/Users/aolei/myWorkspace/myproject/shmily-app/node_modules/electron-osx-sign/node_modules/ms/license.md'

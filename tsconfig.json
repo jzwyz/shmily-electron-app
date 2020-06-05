@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es6",                       
+    "module": "commonjs",                  
+    "sourceMap": true,                     
+    "outDir": "./dist",                     
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,                
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noImplicitThis": false
+  },
+  "include": [
+    "next-env.d.ts",
+    "./src/**/*.ts",
+    "./src/views/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
