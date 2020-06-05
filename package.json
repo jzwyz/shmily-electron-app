@@ -15,7 +15,7 @@
     "dist": "electron-builder"
   },
   "build": {
-    "productName": "czbb",
+    "productName": "彩站帮帮",
     "appId": "com.hongdan310.shop",
     "files": [
       "dist/",
