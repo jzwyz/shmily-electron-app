@@ -1,24 +1,38 @@
 {
   "compilerOptions": {
-    "target": "es6",                       
-    "module": "commonjs",                  
-    "sourceMap": true,                     
-    "outDir": "./dist",                     
+    "target": "es6",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "outDir": "./build",
     "rootDir": "./src",
-    "strict": true,
-    "esModuleInterop": true,                
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "noImplicitThis": false
+    "allowSyntheticDefaultImports": true
   },
-  "include": [
-    "next-env.d.ts",
-    "./src/**/*.ts",
-    "./src/views/**/*.tsx"
-  ],
   "exclude": [
     "node_modules",
-    "dist"
+    "build",
+    "release",
+    "public",
+    "resources"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "react-app-env.d.ts"
   ]
 }

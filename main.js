@@ -1,21 +1,22 @@
-import { app, BrowserWindow } from 'electron';
+const { app, BrowserWindow } = require('electron');
+const path = require('path');
+
 
 function createWindow() {
     // 创建浏览器窗口
     let win = new BrowserWindow({
-        width: 400,
-        height: 700,
-        maxWidth: 600,
-        minWidth: 400,
-        maxHeight: 1200,
-        minHeight: 700,
+        width: 700,
+        height: 500,
         webPreferences: {
             nodeIntegration: true,
+            devTools: true
         }
     })
 
     // 通过url方式加载页面
-    win.loadURL('https://shop.hongdan310.com/')
+    const indexPath = path.resolve(__dirname, './build/index.html');
+    console.log('-----> windows path:', indexPath);
+    win.loadFile(indexPath)
 }
 
 /**
